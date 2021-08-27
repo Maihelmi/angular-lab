@@ -1,0 +1,24 @@
+<p>this is {{title}}</p>
+<h1>{{pageTitle()}}</h1>
+<p>{{isTrue?'correct':'wrong'}}</p>
+<div>hello from angular</div>
+<div>+++++++++++++++++++++++++++++</div>
+<input [value]="email"><br><br>
+<input [value]="emailMethed()"><br><br>
+<input [value]="!isheader?'correct':'wrong'">
+<div>+++++++++++++++++++++++++++++</div>
+
+<p [class]="headerClass">it's first angular page</p>
+<p [class.bold]="isheader">it's first angular page</p>
+<p [ngClass]="{header:isheader,bold:!isheader,italic:isheader}">class binding</p>
+<p [ngClass]="headerMethod()">class binding</p>
+<div>+++++++++++++++++++++++++++++</div>
+
+<p [style.color]="!isheader?'red':'blue'">it's single</p>
+<p [ngStyle]="{color:isheader?'red':'orange', textDecoration:!isheader?'overline':'underline'}">multi style</p>
+<p [ngStyle]="{color:'blue', textDecoration:'overline'}">multi style</p>
+<div [ngStyle]="multiStyle()" >multi style</div>
+<div [ngStyle]="extraStyle" >multi style</div>
+<div>+++++++++++++++++++++++++++++</div>
+
+<button (click)=" toggle()">toggle</button>

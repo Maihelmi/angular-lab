@@ -1,0 +1,14 @@
+.bold{
+    color: rgb(148, 84, 84);
+    font-weight: bold;
+}
+.header{
+    font-size: larger;
+    color:blue;
+    
+
+}
+.italic{
+    font-style: italic;
+}
+
