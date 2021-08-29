@@ -22,3 +22,51 @@
 <div>+++++++++++++++++++++++++++++</div>
 
 <button (click)=" toggle()">toggle</button>
+<div>+++++++++++++++++++++++++++++</div>
+<p *ngIf="isheader">Show this only if "show" is true</p>
+<ng-container
+  *ngIf="isheader; then loggedIn; else loggedOut">
+</ng-container>
+
+<ng-template #loggedIn>
+  <div>
+    Welcome back, friend.
+  </div>
+</ng-template>
+<ng-template #loggedOut>
+  <div>
+    Please friend, login.
+  </div>
+</ng-template>
+
+ <ul>
+  <li *ngFor="let product of PRODUCTS">
+      <h2>{{product.name}} </h2>
+      <p> {{product.description}} </p>
+  </li>
+  </ul> 
+
+
+  
+
+<div [ngSwitch] = "day()">
+
+<div *ngSwitchCase = 0>Today is Sunday! </div>
+
+<div *ngSwitchCase = '1'><h3>Today is Monday</h3></div>
+
+<div *ngSwitchCase = '2'><h3>Today is Tuesday</h3></div>
+
+<div *ngSwitchCase = '3'><h3>Today is Wednesday</h3></div>
+
+<div *ngSwitchCase = '4'><h3>Today is Thursday</h3></div>
+
+<div *ngSwitchCase = '5'><h3>Today is Friday</h3></div>
+
+<div *ngSwitchCase = '6'><h3>Today is Saturday </h3></div>
+
+</div>  
+
+
+
+
